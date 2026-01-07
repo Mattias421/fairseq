@@ -1,0 +1,19 @@
+[project]
+name = "unsupervised"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cython>=3.2.2",
+    "editdistance>=0.8.1",
+    "fairseq>=0.12.2", # potentially dangerous
+    "ninja>=1.13.0",
+    "numpy>=2.2.6",
+    "scipy>=1.15.3",
+    "setuptools>=80.9.0",
+    "soundfile>=0.13.1",
+    "torch==2.5.0",
+    "torchaudio>=2.5.0",
+    "wheel>=0.45.1",
+]
