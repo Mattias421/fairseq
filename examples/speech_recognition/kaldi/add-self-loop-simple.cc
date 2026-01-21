@@ -1,4 +1,5 @@
 /*
+ *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -26,9 +27,9 @@ int32 AddSelfLoopsSimple(fst::StdVectorFst* fst) {
   fst::MakePrecedingInputSymbolsSame(false, fst);
   int32 num_states_after = fst->NumStates();
   KALDI_LOG << "There are " << num_states_before
-            << " states in the original FST; "
+            << " states in the original FST; " 
             << " after MakePrecedingInputSymbolsSame, there are "
-            << num_states_after << " states " << std::endl;
+            << num_states_after << " states ";
 
   auto weight_one = fst::StdArc::Weight::One();
 
@@ -82,13 +83,13 @@ int main(int argc, char** argv) {
   auto fst = fst::ReadFstKaldi(input);
   auto num_states = fst->NumStates();
   KALDI_LOG << "Loading FST from " << input << " with " << num_states
-            << " states." << std::endl;
+            << " states." << "\n";
 
   int32 num_arc_added = AddSelfLoopsSimple(fst);
-  KALDI_LOG << "Adding " << num_arc_added << " self-loop arcs " << std::endl;
+  KALDI_LOG << "Adding " << num_arc_added << " self-loop arcs " << "\n";
 
   fst::WriteFstKaldi(*fst, std::string(output));
-  KALDI_LOG << "Writing FST to " << output << std::endl;
+  KALDI_LOG << "Writing FST to " << output << "\n";
 
   delete fst;
 }

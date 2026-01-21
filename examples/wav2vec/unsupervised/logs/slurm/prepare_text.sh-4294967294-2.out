@@ -1,0 +1,47 @@
+
+The following have been reloaded with a version change:
+  1) binutils/2.40 => binutils/2.34-GCCcore-9.3.0
+
+
+The following have been reloaded with a version change:
+  1) GCC/9.3.0 => GCC/12.3.0
+  2) GCCcore/9.3.0 => GCCcore/12.3.0
+  3) binutils/2.34-GCCcore-9.3.0 => binutils/2.40-GCCcore-12.3.0
+  4) zlib/1.2.11-GCCcore-9.3.0 => zlib/1.2.13-GCCcore-12.3.0
+
+
+The following have been reloaded with a version change:
+  1) libpciaccess/0.16-GCCcore-9.3.0 => libpciaccess/0.17-GCCcore-12.3.0
+
+
+The following have been reloaded with a version change:
+  1) XZ/5.2.5-GCCcore-9.3.0 => XZ/5.4.2-GCCcore-12.3.0
+
+
+The following have been reloaded with a version change:
+  1) FFTW/3.3.8-gompi-2020a => FFTW/3.3.10-GCC-12.3.0
+  2) OpenMPI/4.0.3-GCC-9.3.0 => OpenMPI/4.1.5-GCC-12.3.0
+  3) PMIx/3.1.5-GCCcore-9.3.0 => PMIx/4.2.4-GCCcore-12.3.0
+  4) UCX/1.8.0-GCCcore-9.3.0 => UCX/1.14.1-GCCcore-12.3.0
+  5) gompi/2020a => gompi/2023a
+  6) hwloc/2.2.0-GCCcore-9.3.0 => hwloc/2.9.1-GCCcore-12.3.0
+  7) libevent/2.1.11-GCCcore-9.3.0 => libevent/2.1.12-GCCcore-12.3.0
+  8) libfabric/1.11.0-GCCcore-9.3.0 => libfabric/1.18.0-GCCcore-12.3.0
+  9) libxml2/2.9.10-GCCcore-9.3.0 => libxml2/2.11.4-GCCcore-12.3.0
+ 10) numactl/2.0.13-GCCcore-9.3.0 => numactl/2.0.16-GCCcore-12.3.0
+
+en
+en-us
+/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/src.txt
+/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text
+min phone seen threshold is 1000
+normalising text
+preprocessing
+preprocessing
+2026-01-21 14:36:01 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2026-01-21 14:36:02 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/lm.upper.lid.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text', thresholdtgt=0, thresholdsrc=2, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)
+2026-01-21 14:36:04 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2026-01-21 14:36:05 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/lm.upper.lid.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text', thresholdtgt=0, thresholdsrc=2, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)
+preprocessing
+2026-01-21 14:38:59 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2026-01-21 14:38:59 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/lm.upper.lid.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text', thresholdtgt=0, thresholdsrc=2, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)

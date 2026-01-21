@@ -1,8 +1,22 @@
-#!/usr/bin/env zsh
+#!/bin/bash
+#SBATCH --time=80:00:00
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=64G
+#SBATCH --output=logs/slurm/%x-%a-2.out
+#SBATCH --partition=gpu,gpu-h100,gpu-h100-nvl
+#SBATCH --qos=gpu
+#SBATCH --gres=gpu:1
 # Copyright (c) Facebook, Inc. and its affiliates.
 #
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
+#!/usr/bin/env zsh
+
+cd $EXP/fairseq/examples/wav2vec/unsupervised
+
+ml binutils GCCcore GCC libsndfile cuDNN bzip2
+
+source .venv/bin/activate
 
 source_dir=$1
 tgt_dir=$2
@@ -64,7 +78,7 @@ mkdir -p $tgt_dir/mfcc
 python $FAIRSEQ_ROOT/examples/hubert/simple_kmeans/dump_mfcc_feature.py \
   $tgt_dir $train_split 1 0 $tgt_dir/mfcc
 python $FAIRSEQ_ROOT/examples/hubert/simple_kmeans/learn_kmeans.py \
-	   $tgt_dir/mfcc $train_split 1 $tgt_dir/mfcc/cls$dim 64 --percent -1 
+	   $tgt_dir/mfcc $train_split 1 $tgt_dir/mfcc/cls$dim 64 --percent -1
 python $FAIRSEQ_ROOT/examples/hubert/simple_kmeans/dump_km_label.py \
   $tgt_dir/mfcc $train_split $tgt_dir/mfcc/cls$dim 1 0 $tgt_dir/mfcc/cls${dim}_idx
 cp $tgt_dir/mfcc/cls${dim}_idx/${train_split}_0_1.km $tgt_dir/$train_split.km
