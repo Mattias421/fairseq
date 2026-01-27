@@ -141,3 +141,5 @@ logs/
 nohup.out
 multirun
 outputs
+
+*.swp
