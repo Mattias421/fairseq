@@ -56,26 +56,24 @@ optimizer:
   _name: composite
   groups:
     generator:
-      lr: [0.00005]
       lr_float: null
       optimizer:
         _name: adam
         adam_betas: [0.5,0.98]
         adam_eps: 1e-06
         weight_decay: 0
-        amsgrad: false
+        lr: [0.00005]
       lr_scheduler:
         _name: fixed
         warmup_updates: 0
     discriminator:
-      lr: [ 0.0003 ]
       lr_float: null
       optimizer:
         _name: adam
         adam_betas: [0.5,0.98]
         adam_eps: 1e-06
         weight_decay: 0.0001
-        amsgrad: false
+        lr: [ 0.0003 ]
       lr_scheduler:
         _name: fixed
         warmup_updates: 0
