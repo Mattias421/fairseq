@@ -3,9 +3,6 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=64G
 #SBATCH --output=logs/slurm/%x-%a-2.out
-#SBATCH --partition=gpu,gpu-h100,gpu-h100-nvl
-#SBATCH --qos=gpu
-#SBATCH --gres=gpu:1
 
 ml binutils GCCcore GCC libsndfile cuDNN bzip2
 source .venv/bin/activate
@@ -33,3 +30,7 @@ PYTHONPATH=$FAIRSEQ_ROOT PREFIX=$PREFIX fairseq-hydra-train \
     common.user_dir=${FAIRSEQ_ROOT}/examples/wav2vec/unsupervised \
     model.code_penalty=2,4 model.gradient_penalty=1.5,2.0 \
     model.smoothness_weight=0.5,0.75,1.0 'common.seed=range(0,5)'
+
+#SBATCH --partition=gpu,gpu-h100,gpu-h100-nvl
+#SBATCH --qos=gpu
+#SBATCH --gres=gpu:1

@@ -1,23 +1,23 @@
-
+******
 The following have been reloaded with a version change:
   1) binutils/2.40 => binutils/2.34-GCCcore-9.3.0
 
-
+**
 The following have been reloaded with a version change:
   1) GCC/9.3.0 => GCC/12.3.0
   2) GCCcore/9.3.0 => GCCcore/12.3.0
   3) binutils/2.34-GCCcore-9.3.0 => binutils/2.40-GCCcore-12.3.0
   4) zlib/1.2.11-GCCcore-9.3.0 => zlib/1.2.13-GCCcore-12.3.0
 
-
+***
 The following have been reloaded with a version change:
   1) libpciaccess/0.16-GCCcore-9.3.0 => libpciaccess/0.17-GCCcore-12.3.0
 
-
+****
 The following have been reloaded with a version change:
   1) XZ/5.2.5-GCCcore-9.3.0 => XZ/5.4.2-GCCcore-12.3.0
 
-
+****
 The following have been reloaded with a version change:
   1) FFTW/3.3.8-gompi-2020a => FFTW/3.3.10-GCC-12.3.0
   2) OpenMPI/4.0.3-GCC-9.3.0 => OpenMPI/4.1.5-GCC-12.3.0
@@ -30,18 +30,608 @@ The following have been reloaded with a version change:
   9) libxml2/2.9.10-GCCcore-9.3.0 => libxml2/2.11.4-GCCcore-12.3.0
  10) numactl/2.0.13-GCCcore-9.3.0 => numactl/2.0.16-GCCcore-12.3.0
 
+***
 en
 en-us
-/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/src.txt
-/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text
+/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/src.txt
+/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text
 min phone seen threshold is 1000
 normalising text
+SUCCESS
+2026-01-21 15:12:22 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 15:12:22,842][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/kaldi_dict.phn.txt
+[2026-01-21 15:12:22,843][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/G_kenlm.wrd.o40003.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/kaldi_dict.kenlm.wrd.o40003.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/kenlm.wrd.o40003.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/G_kenlm.wrd.o40003.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 48653511 to 12906346
+[2026-01-21 15:15:49,172][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/kaldi_lexicon.phn.kenlm.wrd.o40003.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/kaldi_dict.phn.txt)
+[2026-01-21 15:15:52,460][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/H.phn.fst
+[2026-01-21 15:15:53,284][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/L.phn.kenlm.wrd.o40003.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/kaldi_dict.phn_disambig.txt)
+[2026-01-21 15:15:59,066][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/LG.phn.kenlm.wrd.o40003.fst
 preprocessing
-preprocessing
-2026-01-21 14:36:01 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
-2026-01-21 14:36:02 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/lm.upper.lid.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text', thresholdtgt=0, thresholdsrc=2, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)
-2026-01-21 14:36:04 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
-2026-01-21 14:36:05 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/lm.upper.lid.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text', thresholdtgt=0, thresholdsrc=2, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)
-preprocessing
-2026-01-21 14:38:59 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
-2026-01-21 14:38:59 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/lm.upper.lid.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text', thresholdtgt=0, thresholdsrc=2, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)
+2026-01-21 15:33:42 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2026-01-21 15:33:42 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/lm.upper.lid.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text', thresholdtgt=0, thresholdsrc=2, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)
+[2026-01-21 15:39:22,724][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/HLGa.phn.kenlm.wrd.o40003.fst
+phonemizing
+[WARNING] words count mismatch on 100.0% of the lines (1/1)
+[WARNING] words count mismatch on 100.0% of the lines (830232/830232)
+one is w ʌ n 
+2026-01-21 15:42:23 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2026-01-21 15:42:23 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones', thresholdtgt=0, thresholdsrc=1000, tgtdict=None, srcdict=None, nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=1, workers=1, dict_only=True)
+2026-01-21 15:42:56 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2026-01-21 15:45:43 | INFO | fairseq_cli.preprocess | [None] /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/phones/lm.phones.filtered.txt: 24820505 sents, 2043930227 tokens, 4.89e-08% replaced (by <unk>)
+2026-01-21 15:45:43 | INFO | fairseq_cli.preprocess | Wrote preprocessed data to /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/phones
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/lm.upper.lid.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+**************************************************************2026-01-21 15:48:27 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+2026-01-21 15:48:28 | INFO | fairseq_cli.preprocess | Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe=None, optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang=None, target_lang=None, trainpref='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/lm.phones.filtered.txt', validpref=None, testpref=None, align_suffix=None, destdir='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones', thresholdtgt=0, thresholdsrc=0, tgtdict=None, srcdict='/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/dict.phn.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=False, only_source=True, padding_factor=8, workers=70, dict_only=False)
+2026-01-21 15:48:28 | INFO | fairseq_cli.preprocess | [None] Dictionary: 64 types
+**************************************
+Unigram tokens 634180658 types 851006
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:10212072 2:36709781504 3:68830846976 4:110129348608
+Statistics:
+1 851006 D1=0.649224 D2=1.02909 D3+=1.37361
+2 35560771 D1=0.724901 D2=1.06426 D3+=1.35939
+3 174321870 D1=0.80704 D2=1.09643 D3+=1.3214
+4 14599760/359779482 D1=0.861491 D2=1.16812 D3+=1.31066
+Memory estimate for binary LM:
+type      MB
+probing 5075 assuming -p 1.5
+probing 6279 assuming -r models -p 1.5
+trie    2802 without quantization
+trie    1586 assuming -q 8 -b 8 quantization 
+trie    2293 assuming -a 22 array pointer compression
+trie    1077 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:10212072 2:568972336 3:3486437400 4:350394240
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:10212072 2:568972336 3:3486437400 4:350394240
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210790208 kB	VmRSS:29928 kB	RSSMax:50651364 kB	user:471.356	sys:108.715	CPU:580.071	real:511.739
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/kenlm.wrd.o40003.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+SUCCESS
+2026-01-21 15:56:11 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 15:56:12,494][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/kaldi_dict.phn.txt
+[2026-01-21 15:56:12,505][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/G_kenlm.wrd.o40003.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/kaldi_dict.kenlm.wrd.o40003.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/kenlm.wrd.o40003.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/G_kenlm.wrd.o40003.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 205324130 to 40855559
+[2026-01-21 16:12:38,303][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/kaldi_lexicon.phn.kenlm.wrd.o40003.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/kaldi_dict.phn.txt)
+[2026-01-21 16:12:44,194][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/H.phn.fst
+[2026-01-21 16:12:45,010][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/L.phn.kenlm.wrd.o40003.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/kaldi_dict.phn_disambig.txt)
+[2026-01-21 16:12:54,700][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words_sil/LG.phn.kenlm.wrd.o40003.fst
+[2026-01-21 16:14:32,586][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words_sil/HLG.phn.kenlm.wrd.o40003.fst
+2026-01-21 16:19:56 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 16:19:58,141][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/kaldi_dict.phn.txt
+[2026-01-21 16:19:58,143][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/G_kenlm.wrd.o40003.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/kaldi_dict.kenlm.wrd.o40003.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/kenlm.wrd.o40003.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/G_kenlm.wrd.o40003.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 48653511 to 12906346
+[2026-01-21 16:23:23,897][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/kaldi_lexicon.phn.kenlm.wrd.o40003.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/kaldi_dict.phn.txt)
+[2026-01-21 16:23:27,305][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/H.phn.fst
+[2026-01-21 16:23:27,422][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/L.phn.kenlm.wrd.o40003.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/kaldi_dict.phn_disambig.txt)
+[2026-01-21 16:23:33,142][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/LG.phn.kenlm.wrd.o40003.fst
+2026-01-21 16:28:41 | INFO | fairseq_cli.preprocess | [None] /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/lm.phones.filtered.txt: 19123953 sents, 1741868648 tokens, 0.0% replaced (by <unk>)
+2026-01-21 16:28:41 | INFO | fairseq_cli.preprocess | Wrote preprocessed data to /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/lm.upper.lid.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+Unigram tokens 423379612 types 1590867
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:19090404 2:36708270080 3:68828004352 4:110124810240
+[2026-01-21 16:32:10,954][__main__][ERROR] - cmd: [PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')], err: /mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded 
+ERROR: FstHeader::Read: Bad FST header: -
+ERROR (fstminimizeencoded[5.5.952~1-44757]:ReadFstKaldi():kaldi-fst-io.cc:35) Reading FST: error reading FST header from standard input
+
+[ Stack-Trace: ]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-base.so(kaldi::MessageLogger::LogMessage() const+0x736) [0x7fc31d1b6c9e]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-decoder.so(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x11) [0x7fc31ceba117]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-fstext.so(fst::ReadFstKaldi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)+0x197) [0x7fc31d219572]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded(main+0x100) [0x411696]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7fc31a411555]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded() [0x4114e9]
+
+kaldi::KaldiFatalError
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 347, in <lambda>
+    lambda: hydra.run(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 107, in run
+    return run_job(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 129, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 677, in cli_main
+    initalize_kaldi(cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 656, in initalize_kaldi
+    lg_graph = create_LG(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 263, in create_LG
+    res = subprocess.run(
+  File "/users/acq22mc/.local/share/uv/python/cpython-3.10.17-linux-x86_64-gnu/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '[PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')]' returned non-zero exit status 255.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 698, in <module>
+    cli_main()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/main.py", line 32, in decorated_main
+    _run_hydra(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 346, in _run_hydra
+    run_and_report(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 267, in run_and_report
+    print_exception(etype=None, value=ex, tb=final_tb)  # type: ignore
+TypeError: print_exception() got an unexpected keyword argument 'etype'
+2026-01-21 16:32:29 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 16:32:30,277][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/kaldi_dict.phn.txt
+[2026-01-21 16:32:30,279][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/G_kenlm.wrd.o40003.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/kaldi_dict.kenlm.wrd.o40003.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/kenlm.wrd.o40003.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/G_kenlm.wrd.o40003.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+Statistics:
+1 1590867 D1=0.670545 D2=1.04788 D3+=1.36033
+2 38092724 D1=0.747287 D2=1.08494 D3+=1.35859
+3 142422457 D1=0.824583 D2=1.13894 D3+=1.34676
+4 10780230/246218563 D1=0.798064 D2=1.30355 D3+=1.53018
+Memory estimate for binary LM:
+type      MB
+probing 4356 assuming -p 1.5
+probing 5395 assuming -r models -p 1.5
+trie    2445 without quantization
+trie    1404 assuming -q 8 -b 8 quantization 
+trie    2005 assuming -a 22 array pointer compression
+trie     964 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:19090404 2:609483584 3:2848449140 4:258725520
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:19090404 2:609483584 3:2848449140 4:258725520
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210798404 kB	VmRSS:52940 kB	RSSMax:48010644 kB	user:307.957	sys:58.0276	CPU:365.985	real:312.31
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/kenlm.wrd.o40003.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+*******LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+*********************************************************************************************
+SUCCESS
+2026-01-21 16:35:06 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 16:35:07,292][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/kaldi_dict.phn.txt
+[2026-01-21 16:35:07,294][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/G_kenlm.wrd.o40003.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/kaldi_dict.kenlm.wrd.o40003.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/kenlm.wrd.o40003.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/G_kenlm.wrd.o40003.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 177399161 to 44525981
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 205324130 to 40855559
+[2026-01-21 16:47:05,313][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/HLGa.phn.kenlm.wrd.o40003.fst
+[2026-01-21 16:48:31,629][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/kaldi_lexicon.phn.kenlm.wrd.o40003.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/kaldi_dict.phn.txt)
+[2026-01-21 16:48:43,751][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/H.phn.fst
+[2026-01-21 16:48:43,822][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/L.phn.kenlm.wrd.o40003.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/kaldi_dict.phn_disambig.txt)
+[2026-01-21 16:49:03,784][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words_sil/LG.phn.kenlm.wrd.o40003.fst
+[2026-01-21 16:49:14,253][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/kaldi_lexicon.phn.kenlm.wrd.o40003.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/kaldi_dict.phn.txt)
+[2026-01-21 16:49:20,100][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/H.phn.fst
+[2026-01-21 16:49:20,355][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/L.phn.kenlm.wrd.o40003.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/kaldi_dict.phn_disambig.txt)
+[2026-01-21 16:49:30,036][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_words/LG.phn.kenlm.wrd.o40003.fst
+[2026-01-21 17:06:44,407][__main__][ERROR] - cmd: [PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')], err: /mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded 
+ERROR: FstHeader::Read: Bad FST header: -
+ERROR (fstminimizeencoded[5.5.952~1-44757]:ReadFstKaldi():kaldi-fst-io.cc:35) Reading FST: error reading FST header from standard input
+
+[ Stack-Trace: ]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-base.so(kaldi::MessageLogger::LogMessage() const+0x736) [0x7f88a26b1c9e]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-decoder.so(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x11) [0x7f88a23b5117]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-fstext.so(fst::ReadFstKaldi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)+0x197) [0x7f88a2714572]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded(main+0x100) [0x411696]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7f889f90c555]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded() [0x4114e9]
+
+kaldi::KaldiFatalError
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 347, in <lambda>
+    lambda: hydra.run(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 107, in run
+    return run_job(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 129, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 677, in cli_main
+    initalize_kaldi(cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 656, in initalize_kaldi
+    lg_graph = create_LG(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 263, in create_LG
+    res = subprocess.run(
+  File "/users/acq22mc/.local/share/uv/python/cpython-3.10.17-linux-x86_64-gnu/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '[PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')]' returned non-zero exit status 255.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 698, in <module>
+    cli_main()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/main.py", line 32, in decorated_main
+    _run_hydra(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 346, in _run_hydra
+    run_and_report(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 267, in run_and_report
+    print_exception(etype=None, value=ex, tb=final_tb)  # type: ignore
+TypeError: print_exception() got an unexpected keyword argument 'etype'
+2026-01-21 17:06:53 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 17:06:54,603][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/kaldi_dict.phn.txt
+[2026-01-21 17:06:54,605][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/G_kenlm.wrd.o40003.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/kaldi_dict.kenlm.wrd.o40003.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/kenlm.wrd.o40003.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/G_kenlm.wrd.o40003.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+[2026-01-21 17:08:47,070][__main__][ERROR] - cmd: [PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')], err: /mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded 
+ERROR: FstHeader::Read: Bad FST header: -
+ERROR (fstminimizeencoded[5.5.952~1-44757]:ReadFstKaldi():kaldi-fst-io.cc:35) Reading FST: error reading FST header from standard input
+
+[ Stack-Trace: ]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-base.so(kaldi::MessageLogger::LogMessage() const+0x736) [0x7f2d92cacc9e]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-decoder.so(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x11) [0x7f2d929b0117]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-fstext.so(fst::ReadFstKaldi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)+0x197) [0x7f2d92d0f572]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded(main+0x100) [0x411696]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7f2d8ff07555]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded() [0x4114e9]
+
+kaldi::KaldiFatalError
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 347, in <lambda>
+    lambda: hydra.run(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 107, in run
+    return run_job(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 129, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 677, in cli_main
+    initalize_kaldi(cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 656, in initalize_kaldi
+    lg_graph = create_LG(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 263, in create_LG
+    res = subprocess.run(
+  File "/users/acq22mc/.local/share/uv/python/cpython-3.10.17-linux-x86_64-gnu/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '[PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')]' returned non-zero exit status 255.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 698, in <module>
+    cli_main()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/main.py", line 32, in decorated_main
+    _run_hydra(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 346, in _run_hydra
+    run_and_report(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 267, in run_and_report
+    print_exception(etype=None, value=ex, tb=final_tb)  # type: ignore
+TypeError: print_exception() got an unexpected keyword argument 'etype'
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/phones/lm.phones.filtered.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+*******************************************************************************************LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+*********
+Unigram tokens 2019109722 types 63
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:756 2:36711522304 3:68834099200 4:110134566912
+Substituting fallback discounts for order 0: D1=0.5 D2=1 D3+=1.5
+Substituting fallback discounts for order 1: D1=0.5 D2=1 D3+=1.5
+Statistics:
+1 63 D1=0.5 D2=1 D3+=1.5
+2 3144 D1=0.5 D2=1 D3+=1.5
+3 97385 D1=0.496871 D2=0.925042 D3+=1.3388
+4 1457284 D1=0.509077 D2=1.03677 D3+=1.51868
+Memory estimate for binary LM:
+type       kB
+probing 27974 assuming -p 1.5
+probing 28563 assuming -r models -p 1.5
+trie     7686 without quantization
+trie     3023 assuming -q 8 -b 8 quantization 
+trie     7564 assuming -a 22 array pointer compression
+trie     2900 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:756 2:50304 3:1947700 4:34974816
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:756 2:50304 3:1947700 4:34974816
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210790208 kB	VmRSS:5452 kB	RSSMax:42166320 kB	user:389.185	sys:22.3554	CPU:411.54	real:412.478
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/phones/lm.phones.filtered.04.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+SUCCESS
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/phones/lm.phones.filtered.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+*********************LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 177399161 to 44525981
+****************************[2026-01-21 17:20:57,068][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/kaldi_lexicon.phn.kenlm.wrd.o40003.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/kaldi_dict.phn.txt)
+*[2026-01-21 17:21:09,602][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/H.phn.fst
+*[2026-01-21 17:21:09,919][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/L.phn.kenlm.wrd.o40003.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/kaldi_dict.phn_disambig.txt)
+**[2026-01-21 17:21:30,037][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_words/LG.phn.kenlm.wrd.o40003.fst
+***********************************[2026-01-21 17:25:49,374][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_words/HLG.phn.kenlm.wrd.o40003.fst
+************
+Unigram tokens 2019109722 types 63
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:756 2:13272627200 3:24886175744 4:39817883648 5:58067746816 6:79635767296
+Substituting fallback discounts for order 0: D1=0.5 D2=1 D3+=1.5
+Substituting fallback discounts for order 1: D1=0.5 D2=1 D3+=1.5
+Statistics:
+1 63 D1=0.5 D2=1 D3+=1.5
+2 3144 D1=0.5 D2=1 D3+=1.5
+3 97385 D1=0.496871 D2=0.925042 D3+=1.3388
+4 1457284 D1=0.52224 D2=0.991702 D3+=1.47293
+5 10832255 D1=0.576421 D2=1.04553 D3+=1.50543
+6 45322449 D1=0.601395 D2=1.03904 D3+=1.45375
+Memory estimate for binary LM:
+type      MB
+probing 1061 assuming -p 1.5
+probing 1132 assuming -r models -p 1.5
+trie     339 without quantization
+trie     146 assuming -q 8 -b 8 quantization 
+trie     315 assuming -a 22 array pointer compression
+trie     121 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:756 2:50304 3:1947700 4:34974816 5:303303140 6:1450318368
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:756 2:50304 3:1947700 4:34974816 5:303303140 6:1450318368
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210822020 kB	VmRSS:5628 kB	RSSMax:34681804 kB	user:677.946	sys:63.3855	CPU:741.331	real:735.978
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/phones/lm.phones.filtered.06.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+SUCCESS
+2026-01-21 17:28:54 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 17:28:55,570][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/kaldi_dict.phn.txt
+[2026-01-21 17:28:55,572][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/G_lm.phones.filtered.06.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/kaldi_dict.lm.phones.filtered.06.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/phones/lm.phones.filtered.06.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/G_lm.phones.filtered.06.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:HeaderAvailable():arpa-lm-compiler.cc:300) Reverting to slower state tracking because model is large: 6-gram with symbols up to 66
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \5-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \6-grams: section.
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/phones/lm.phones.filtered.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 12363043 to 12363042
+****************************[2026-01-21 17:31:29,227][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/kaldi_lexicon.phn.lm.phones.filtered.06.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/kaldi_dict.phn.txt)
+[2026-01-21 17:31:29,290][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/H.phn.fst
+[2026-01-21 17:31:29,391][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/L.phn.lm.phones.filtered.06.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/kaldi_dict.phn_disambig.txt)
+[2026-01-21 17:31:29,438][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/LG.phn.lm.phones.filtered.06.fst
+************************************************************************
+Unigram tokens 357239699 types 60
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:720 2:36711522304 3:68834099200 4:110134566912
+Substituting fallback discounts for order 0: D1=0.5 D2=1 D3+=1.5
+Statistics:
+1 60 D1=0.5 D2=1 D3+=1.5
+2 2923 D1=0.486301 D2=0.969041 D3+=0.687775
+3 83819 D1=0.478149 D2=0.981676 D3+=1.49717
+4 1041649 D1=0.498644 D2=1.06423 D3+=1.56058
+Memory estimate for binary LM:
+type       kB
+probing 20344 assuming -p 1.5
+probing 20853 assuming -r models -p 1.5
+trie     5647 without quantization
+trie     2230 assuming -q 8 -b 8 quantization 
+trie     5549 assuming -a 22 array pointer compression
+trie     2131 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:720 2:46768 3:1676380 4:24999576
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:720 2:46768 3:1676380 4:24999576
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210790208 kB	VmRSS:29364 kB	RSSMax:42154552 kB	user:54.4293	sys:17.1472	CPU:71.5766	real:71.7362
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/phones/lm.phones.filtered.04.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+SUCCESS
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/phones/lm.phones.filtered.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+Unigram tokens 357239699 types 60
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:720 2:13272627200 3:24886175744 4:39817883648 5:58067746816 6:79635767296
+Substituting fallback discounts for order 0: D1=0.5 D2=1 D3+=1.5
+Statistics:
+1 60 D1=0.5 D2=1 D3+=1.5
+2 2923 D1=0.486301 D2=0.969041 D3+=0.687775
+3 83819 D1=0.478149 D2=0.981676 D3+=1.49717
+4 1041649 D1=0.530926 D2=1.02017 D3+=1.50815
+5 5980377 D1=0.605655 D2=1.06744 D3+=1.52406
+6 19292041 D1=0.609843 D2=1.07043 D3+=1.48183
+Memory estimate for binary LM:
+type     MB
+probing 493 assuming -p 1.5
+probing 534 assuming -r models -p 1.5
+trie    164 without quantization
+trie     71 assuming -q 8 -b 8 quantization 
+trie    150 assuming -a 22 array pointer compression
+trie     58 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:720 2:46768 3:1676380 4:24999576 5:167450556 6:617345312
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:720 2:46768 3:1676380 4:24999576 5:167450556 6:617345312
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210822020 kB	VmRSS:29776 kB	RSSMax:33867944 kB	user:117.525	sys:26.2253	CPU:143.75	real:140.502
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/phones/lm.phones.filtered.06.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+SUCCESS
+2026-01-21 17:34:47 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 17:34:48,443][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/kaldi_dict.phn.txt
+[2026-01-21 17:34:48,445][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/G_lm.phones.filtered.06.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/kaldi_dict.lm.phones.filtered.06.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/phones/lm.phones.filtered.06.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/G_lm.phones.filtered.06.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:HeaderAvailable():arpa-lm-compiler.cc:300) Reverting to slower state tracking because model is large: 6-gram with symbols up to 63
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \5-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \6-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 7089743 to 7089742
+[2026-01-21 17:35:57,332][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/kaldi_lexicon.phn.lm.phones.filtered.06.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/kaldi_dict.phn.txt)
+[2026-01-21 17:35:57,384][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/H.phn.fst
+[2026-01-21 17:35:57,446][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/L.phn.lm.phones.filtered.06.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/kaldi_dict.phn_disambig.txt)
+[2026-01-21 17:35:57,489][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/LG.phn.lm.phones.filtered.06.fst
+[2026-01-21 17:37:48,404][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/HLGa.phn.lm.phones.filtered.06.fst
+[2026-01-21 17:38:01,021][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/HLGa.phn.lm.phones.filtered.06.fst
+[2026-01-21 17:39:01,593][__main__][ERROR] - cmd: [PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')], err: /mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded 
+ERROR: FstHeader::Read: Bad FST header: -
+ERROR (fstminimizeencoded[5.5.952~1-44757]:ReadFstKaldi():kaldi-fst-io.cc:35) Reading FST: error reading FST header from standard input
+
+[ Stack-Trace: ]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-base.so(kaldi::MessageLogger::LogMessage() const+0x736) [0x7fed30850c9e]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-decoder.so(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x11) [0x7fed30554117]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lib/libkaldi-fstext.so(fst::ReadFstKaldi(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)+0x197) [0x7fed308b3572]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded(main+0x100) [0x411696]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x7fed2daab555]
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded() [0x4114e9]
+
+kaldi::KaldiFatalError
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 198, in run_and_report
+    return func()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 347, in <lambda>
+    lambda: hydra.run(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 107, in run
+    return run_job(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/core/utils.py", line 129, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 677, in cli_main
+    initalize_kaldi(cfg)
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 656, in initalize_kaldi
+    lg_graph = create_LG(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 263, in create_LG
+    res = subprocess.run(
+  File "/users/acq22mc/.local/share/uv/python/cpython-3.10.17-linux-x86_64-gnu/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '[PosixPath('/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/fstbin/fstminimizeencoded')]' returned non-zero exit status 255.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/speech_recognition/kaldi/kaldi_initializer.py", line 698, in <module>
+    cli_main()
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/main.py", line 32, in decorated_main
+    _run_hydra(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 346, in _run_hydra
+    run_and_report(
+  File "/mnt/parscratch/users/acq22mc/exp/fairseq/examples/wav2vec/unsupervised/.venv/lib/python3.10/site-packages/hydra/_internal/utils.py", line 267, in run_and_report
+    print_exception(etype=None, value=ex, tb=final_tb)  # type: ignore
+TypeError: print_exception() got an unexpected keyword argument 'etype'
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/lm.phones.filtered.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+**********************************************************************************[2026-01-21 17:42:35,152][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/wiki103.line/text/fst/phn_to_phn_sil/HLG.phn.lm.phones.filtered.06.fst
+******************
+Unigram tokens 1722744695 types 63
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:756 2:36711522304 3:68834099200 4:110134566912
+Substituting fallback discounts for order 0: D1=0.5 D2=1 D3+=1.5
+Statistics:
+1 63 D1=0.5 D2=1 D3+=1.5
+2 3176 D1=0.531073 D2=0.733102 D3+=1.48725
+3 97979 D1=0.494285 D2=0.957784 D3+=1.42562
+4 1422105 D1=0.489851 D2=1.06399 D3+=1.56103
+Memory estimate for binary LM:
+type       kB
+probing 27370 assuming -p 1.5
+probing 27963 assuming -r models -p 1.5
+trie     7534 without quantization
+trie     2966 assuming -q 8 -b 8 quantization 
+trie     7410 assuming -a 22 array pointer compression
+trie     2842 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:756 2:50816 3:1959580 4:34130520
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:756 2:50816 3:1959580 4:34130520
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210790208 kB	VmRSS:5468 kB	RSSMax:42165500 kB	user:237.296	sys:18.0797	CPU:255.376	real:255.984
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/lm.phones.filtered.04.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+SUCCESS
+=== 1/5 Counting and sorting n-grams ===
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/lm.phones.filtered.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+**prepare text done
+**************************************************[2026-01-21 17:47:38,074][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/LibriLM/text/fst/phn_to_phn_sil/HLG.phn.lm.phones.filtered.06.fst
+****************************prepare text done
+slurmstepd: error: Detected 2 oom_kill events in StepId=9193575.batch. Some of the step tasks have been OOM Killed.
+********************
+Unigram tokens 1722744695 types 63
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:756 2:13272627200 3:24886175744 4:39817883648 5:58067746816 6:79635767296
+Substituting fallback discounts for order 0: D1=0.5 D2=1 D3+=1.5
+Statistics:
+1 63 D1=0.5 D2=1 D3+=1.5
+2 3176 D1=0.531073 D2=0.733102 D3+=1.48725
+3 97979 D1=0.494285 D2=0.957784 D3+=1.42562
+4 1422105 D1=0.525478 D2=1.00098 D3+=1.47942
+5 10124321 D1=0.582184 D2=1.04688 D3+=1.51319
+6 40251684 D1=0.583635 D2=1.06098 D3+=1.49255
+Memory estimate for binary LM:
+type      MB
+probing  957 assuming -p 1.5
+probing 1024 assuming -r models -p 1.5
+trie     309 without quantization
+trie     133 assuming -q 8 -b 8 quantization 
+trie     285 assuming -a 22 array pointer compression
+trie     110 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:756 2:50816 3:1959580 4:34130520 5:283480988 6:1288053888
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:756 2:50816 3:1959580 4:34130520 5:283480988 6:1288053888
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:210822020 kB	VmRSS:5636 kB	RSSMax:34525272 kB	user:484.678	sys:45.3376	CPU:530.016	real:525.135
+Reading /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/lm.phones.filtered.06.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+SUCCESS
+2026-01-21 17:52:24 | INFO | fairseq.tasks.text_to_speech | Please install tensorboardX: pip install tensorboardX
+[2026-01-21 17:52:25,153][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/kaldi_dict.phn.txt
+[2026-01-21 17:52:25,155][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/G_lm.phones.filtered.06.fst
+/mnt/parscratch/users/acq22mc/exp/pykaldi/tools/kaldi/src/lmbin/arpa2fst --disambig-symbol=#0 --write-symbol-table=/mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/kaldi_dict.lm.phones.filtered.06.txt /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/phones/lm.phones.filtered.06.arpa /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/G_lm.phones.filtered.06.fst 
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.952~1-44757]:HeaderAvailable():arpa-lm-compiler.cc:300) Reverting to slower state tracking because model is large: 6-gram with symbols up to 66
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \4-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \5-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:Read():arpa-file-parser.cc:149) Reading \6-grams: section.
+LOG (arpa2fst[5.5.952~1-44757]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 11623577 to 11623576
+[2026-01-21 17:54:34,613][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/kaldi_lexicon.phn.lm.phones.filtered.06.txt (in units file: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/kaldi_dict.phn.txt)
+[2026-01-21 17:54:34,699][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/H.phn.fst
+[2026-01-21 17:54:34,748][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/L.phn.lm.phones.filtered.06.fst (in units: /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/kaldi_dict.phn_disambig.txt)
+[2026-01-21 17:54:34,791][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/LG.phn.lm.phones.filtered.06.fst
+[2026-01-21 17:59:43,489][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/HLGa.phn.lm.phones.filtered.06.fst
+[2026-01-21 18:08:04,381][__main__][INFO] - Creating /mnt/parscratch/users/acq22mc/data/variety-text-corpus/NewsCrawl2013/text/fst/phn_to_phn_sil/HLG.phn.lm.phones.filtered.06.fst
+prepare text done
+slurmstepd: error: Detected 2 oom_kill events in StepId=9193744.batch. Some of the step tasks have been OOM Killed.

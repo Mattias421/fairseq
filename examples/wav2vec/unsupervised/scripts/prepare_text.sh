@@ -21,16 +21,13 @@ source .venv/bin/activate
 source env_vars.sh
 
 lg='en'
-dset=wiki103.line
+dset=NewsCrawl2013
 text_path=$DATA/variety-text-corpus/$dset/src.txt
 target_dir=$DATA/variety-text-corpus/$dset/text
 min_phones=1000
 phonemizer='espeak-ng'
 lid_path=outputs/lid.176.bin
 sil_prob=0.5
-
-# DEBUGSTEP
-rm -r $target_dir
 
 if [ -z "$lid_path" ]; then
   lid_path="lid.187.bin"
