@@ -46,6 +46,8 @@ test_split=test
 
 all_splits=($train_split)
 
+echo "checking ${source_dir}/valid.tsv"
+
 if [[ -f "$source_dir/valid.tsv" ]]; then
     all_splits+=('valid')
 fi
