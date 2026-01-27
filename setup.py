@@ -94,12 +94,6 @@ extensions.extend(
                 "fairseq/clib/libnat/edit_dist.cpp",
             ],
         ),
-        cpp_extension.CppExtension(
-            "alignment_train_cpu_binding",
-            sources=[
-                "examples/operators/alignment_train_cpu.cpp",
-            ],
-        ),
     ]
 )
 if "CUDA_HOME" in os.environ:
