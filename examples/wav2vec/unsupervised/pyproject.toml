@@ -9,6 +9,7 @@ dependencies = [
     "editdistance>=0.8.1",
     "fairseq",
     "fasttext>=0.9.3",
+    "flashlight-text>=0.0.7",
     "joblib>=1.5.3",
     "kenlm>=0.3.0",
     "ninja>=1.13.0",

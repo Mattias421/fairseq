@@ -280,7 +280,9 @@ def prepare_result_files(cfg: UnsupGenerateConfig):
         )
         return open(path, "w", buffering=1)
 
+    print("writing results")
     if not cfg.results_path:
+        logger.info("Not writing results because no path")
         return None
 
     return {
@@ -381,6 +383,7 @@ def generate(cfg: UnsupGenerateConfig, models, saved_cfg, use_cuda):
     if cfg.results_path is not None and not os.path.exists(cfg.results_path):
         os.makedirs(cfg.results_path)
 
+    logger.info("prepare_result_files")
     res_files = prepare_result_files(cfg)
     errs_t = 0
     lengths_hyp_t = 0
@@ -531,6 +534,7 @@ def generate(cfg: UnsupGenerateConfig, models, saved_cfg, use_cuda):
 
         vt_length_t = sum(len(h) for h in viterbi_transcript)
 
+    logging.info(f"res_files is {res_files is not None}")
     if res_files is not None:
         for r in res_files.values():
             r.close()
@@ -594,7 +598,7 @@ def main(cfg: UnsupGenerateConfig, model=None):
             "blank_weight": cfg.blank_weight,
             "blank_mode": cfg.blank_mode,
         }
-    
+
     if cfg.decode_stride:
         overrides["model"]["generator_stride"] = cfg.decode_stride
 
