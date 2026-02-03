@@ -48,7 +48,7 @@ criterion:
     - code_ppl
 
 optimization:
-  max_update: 150000
+  max_update: 1500
   clip_norm: 5.0
   lr: [0]
 

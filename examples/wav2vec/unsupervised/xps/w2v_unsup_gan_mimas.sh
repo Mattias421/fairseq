@@ -18,8 +18,8 @@ PYTHONPATH=$FAIRSEQ_ROOT PREFIX=$PREFIX fairseq-hydra-train \
     task.text_data=${TEXT_DATA} \
     task.kenlm_path=${KENLM_PATH} \
     common.user_dir=${FAIRSEQ_ROOT}/examples/wav2vec/unsupervised \
-    model.code_penalty=2 model.gradient_penalty=1.5 \
-    model.smoothness_weight=0.75
+    model.code_penalty=2,4 model.gradient_penalty=1.5,2.0 \
+    model.smoothness_weight=0.75,0.5,1.0
 
 # PYTHONPATH=$FAIRSEQ_ROOT PREFIX=$PREFIX fairseq-hydra-train \
 #     -m --config-dir config/gan \
