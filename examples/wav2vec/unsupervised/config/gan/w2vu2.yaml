@@ -5,9 +5,10 @@ common:
   fp16_no_flatten_grads: true
   log_format: json
   log_interval: 100
-  tensorboard_logdir: tb
   reset_logging: false
   suppress_crashes: false
+  wandb_project: wav2vecU
+
 
 checkpoint:
   save_interval: 1000

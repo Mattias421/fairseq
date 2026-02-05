@@ -11,6 +11,9 @@ TASK_DATA=$DATA/LibriSpeech-10hr-rVAD/features/wav2vec_vox
 TEXT_DATA=$DATA/variety-text-corpus/LibriLM/text/phones
 KENLM_PATH=$TEXT_DATA/lm.phones.filtered.04.bin  # KenLM 4-gram phoneme language model (LM data = GAN data here)
 
+WANDB_TAGS=lr_sweep
+WANDB_RUN_GROUP=lr_sweep
+
 PYTHONPATH=$FAIRSEQ_ROOT PREFIX=$PREFIX fairseq-hydra-train \
     -m --config-dir config/gan \
     --config-name $CONFIG_NAME \
@@ -18,8 +21,10 @@ PYTHONPATH=$FAIRSEQ_ROOT PREFIX=$PREFIX fairseq-hydra-train \
     task.text_data=${TEXT_DATA} \
     task.kenlm_path=${KENLM_PATH} \
     common.user_dir=${FAIRSEQ_ROOT}/examples/wav2vec/unsupervised \
-    model.code_penalty=2,4 model.gradient_penalty=1.5,2.0 \
-    model.smoothness_weight=0.75,0.5,1.0
+    optimizer.groups.generator.optimizer.lr="[0.000001]","[2e-6]","[3e-6]","[4e-6]"  \
+    optimizer.groups.discriminator.optimizer.lr="[0.0003]","[2e-4]","[1e-4]","[4e-4]"  \
+    # model.code_penalty=2,4 model.gradient_penalty=1.5,2.0 \
+    # model.smoothness_weight=0.75,0.5,1.0
 
 # PYTHONPATH=$FAIRSEQ_ROOT PREFIX=$PREFIX fairseq-hydra-train \
 #     -m --config-dir config/gan \
